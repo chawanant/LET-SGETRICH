@@ -9,15 +9,14 @@ package GUIProject;
  *
  * @author HP
  */
+import static java.awt.Color.WHITE;
 import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 public class question1 extends javax.swing.JFrame {
 
     int callquestion;
-    /**
-     * Creates new form question1
-     */
+     
     public void init(){
     callquestion=0;
 }
@@ -27,24 +26,26 @@ public class question1 extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     int count=0;
     String[] imagenames={"starter.png"};
-    int money0=0;
-    String[]immoney0={"money1.jpg"};
+    int money=0;
+    String[] immoney={"starter.png"};
     int money1=0;
-    String[]immoney1={"money2.png"};
+    String[]immoney1={"money1.jpg"};
     int money2=0;
-    String[]immoney2={"money3.png"};
+    String[]immoney2={"money2.png"};
     int money3=0;
-    String[]immoney3={"money4.png"};
+    String[]immoney3={"money3.png"};
     int money4=0;
-    String[]immoney4={"money5.png"};
+    String[]immoney4={"money4.png"};
     int money5=0;
-    String[]immoney5={"money6.png"};
-    int money6=0;
-    String[]immoney6={"money7.png"};
+    String[]immoney6={"money5.png"};
     int money7=0;
-    String[]immoney7={"money8.png"};
-        int money8=0;
-    String[]immoney8={"money9.png"};
+    String[]immoney7={"money6.png"};
+    int money8=0;
+    String[]immoney8={"money7.png"};
+    int money9=0;
+    String[]immoney9={"money8.png"};
+    int money10=0;
+    String[]immoney10={"money9.png"};
     
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -78,6 +79,11 @@ public class question1 extends javax.swing.JFrame {
         Nextbutton.setFont(new java.awt.Font("Rockwell", 0, 10)); // NOI18N
         Nextbutton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUIProject/image/240_F_32348946_6LyWrw8sTY2hwuIRC85khoCh4nva4ir1.png"))); // NOI18N
         Nextbutton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 5));
+        Nextbutton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                NextbuttonMouseClicked(evt);
+            }
+        });
         Nextbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NextbuttonActionPerformed(evt);
@@ -199,7 +205,30 @@ public class question1 extends javax.swing.JFrame {
     }//GEN-LAST:event_ans1ActionPerformed
 
     private void ans1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans1MouseClicked
-       
+if(callquestion==1 && ans1.isFocusable()){
+        ans1.setOpaque(true);
+        ans1.setForeground(Color.BLACK);
+        ans1.setBackground(Color.green);
+        ans2.setOpaque(true);
+        ans2.setForeground(Color.BLACK);
+        ans2.setBackground(Color.WHITE);
+        ans3.setOpaque(true);
+        ans3.setForeground(Color.BLACK);
+        ans3.setBackground(Color.WHITE);
+        ans4.setOpaque(true);
+        ans4.setForeground(Color.BLACK);
+        ans4.setBackground(Color.WHITE)  ;
+        ImageIcon[] imagelist1=new ImageIcon[1];
+           for (int i = 0; i < imagelist1.length; i++) {
+         imagelist1[i]=new ImageIcon(getClass().getResource("/GUIProject/image/"+immoney1[i]));
+                
+           }
+           if(money1<0)money1=1;
+           if(money1>=0 && money1< immoney1.length){
+               Price.setIcon(imagelist1[money1]);
+          money1++;
+           }       
+    }                                        
     }//GEN-LAST:event_ans1MouseClicked
 
     private void ans3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans3MouseClicked
@@ -233,7 +262,39 @@ public class question1 extends javax.swing.JFrame {
     }//GEN-LAST:event_HelpbuttonActionPerformed
 
     private void NextbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextbuttonActionPerformed
-     callquestion=callquestion+1;
+
+    }//GEN-LAST:event_NextbuttonActionPerformed
+
+    @SuppressWarnings("empty-statement")
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+       Question.setText("");
+       ans1.setText("");
+       ans2.setText("");
+       ans3.setText("");
+       ans4.setText("");
+
+    }//GEN-LAST:event_formWindowActivated
+
+    private void HelpbuttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HelpbuttonMouseClicked
+ 
+    }//GEN-LAST:event_HelpbuttonMouseClicked
+
+    private void ans3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ans3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ans3ActionPerformed
+
+    private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
+        background b = new background();
+        b.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_BackButtonActionPerformed
+
+    private void NextbuttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NextbuttonMouseClicked
+        callquestion=callquestion+1;
+        ans1.setBackground(WHITE);
+        ans2.setBackground(WHITE);
+        ans3.setBackground(WHITE);
+        ans4.setBackground(WHITE);
  if(callquestion==1){
      Question.setText("What are two types of Network?");
      ans1.setText("A). WAN and LAN ");
@@ -269,31 +330,8 @@ if(callquestion==5){
      ans3.setText("C). Manchester by the Sea");
      ans4.setText("D). Zootopia");
  }
-    }//GEN-LAST:event_NextbuttonActionPerformed
-
-    @SuppressWarnings("empty-statement")
-    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
-       Question.setText("");
-       ans1.setText("");
-       ans2.setText("");
-       ans3.setText("");
-       ans4.setText("");
-
-    }//GEN-LAST:event_formWindowActivated
-
-    private void HelpbuttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HelpbuttonMouseClicked
- 
-    }//GEN-LAST:event_HelpbuttonMouseClicked
-
-    private void ans3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ans3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ans3ActionPerformed
-
-    private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
-        background b = new background();
-        b.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_BackButtonActionPerformed
+    
+    }//GEN-LAST:event_NextbuttonMouseClicked
 
     /**
      * @param args the command line arguments

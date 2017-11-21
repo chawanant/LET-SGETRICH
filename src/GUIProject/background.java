@@ -41,7 +41,7 @@ public class background extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setForeground(new java.awt.Color(240, 240, 240));
         jPanel1.setMinimumSize(new java.awt.Dimension(800, 600));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -90,14 +90,13 @@ public class background extends javax.swing.JFrame {
         jPanel1.add(Exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 540, 90, 40));
 
         coin.setForeground(new java.awt.Color(255, 255, 255));
-        coin.setIcon(new javax.swing.ImageIcon("C:\\Users\\HP\\Pictures\\Saved Pictures\\gold-coin-splash-bingo-jackpot-win-casino-poker-coins-vector-d-background-realistic-golden-dollar-explosion-illustration-game-100250406.png")); // NOI18N
+        coin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUIProject/image/gold-coin-splash-bingo-jackpot-win-casino-poker-coins-vector-d-background-realistic-golden-dollar-explosion-illustration-game-100250406.png"))); // NOI18N
         jPanel1.add(coin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, -1));
 
-        money.setIcon(new javax.swing.ImageIcon("C:\\Users\\HP\\Pictures\\Saved Pictures\\19.event.sourcing.png")); // NOI18N
-        money.setText("jLabel1");
+        money.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUIProject/image/19.event.sourcing.png"))); // NOI18N
         jPanel1.add(money, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
-        GIFbackground.setIcon(new javax.swing.ImageIcon("C:\\Users\\HP\\Pictures\\Saved Pictures\\16DCbx.gif")); // NOI18N
+        GIFbackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUIProject/image/16DCbx.gif"))); // NOI18N
         GIFbackground.setText("jLabel1");
         jPanel1.add(GIFbackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
